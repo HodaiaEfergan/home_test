@@ -4,7 +4,7 @@ const app= express();
 const port=process.env.PORT || 5000;
 const http=require("http").createServer();
 
-const io=require("socket.io")(http);
+const io=require("socket.io").listen(http);
 
 io.on("connection",(socket)=>{
 
